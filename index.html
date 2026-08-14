@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pinkc Nail Beauty | Nail • Lash • Brow • Hair Removal</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fffafc;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #f2e7eb;
+    }
+
+    .nav-container {
+      max-width: 1180px;
+      margin: auto;
+      padding: 8px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      }
+.logo img {
+    width: 110px;
+    height: 75px;
+    object-fit: contain;
+    display: block;
+}
+    .logo span {
+      color: #db6790;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: #db6790;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 85% 30%, #f7c6d9 0, #f7c6d9 12%, transparent 13%),
+        radial-gradient(circle at 90% 50%, #fbe4ec 0, #fbe4ec 18%, transparent 19%),
+        #fffafc;
+    }
+
+    .hero-container {
+      max-width: 1180px;
+      margin: auto;
+      width: 100%;
+      padding: 80px 24px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .small-tag {
+      display: inline-block;
+      border: 1px solid #e9d5dd;
+      border-radius: 30px;
+      padding: 8px 15px;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      margin-bottom: 25px;
+      background: white;
+    }
+
+    h1 {
+      font-size: clamp(52px, 7vw, 88px);
+      line-height: 0.98;
+      letter-spacing: -4px;
+      margin-bottom: 28px;
+    }
+
+    h1 span {
+      color: #d9618b;
+    }
+
+    .hero-text {
+      max-width: 650px;
+      color: #666;
+      font-size: 17px;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 23px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.25s;
+    }
+
+    .btn-dark {
+      background: #222;
+      color: white;
+    }
+
+    .btn-dark:hover {
+      background: #d9618b;
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background: white;
+      border: 1px solid #e5d9de;
+    }
+
+    .btn-light:hover {
+      border-color: #d9618b;
+      color: #d9618b;
+    }
+
+    /* HERO CARDS */
+    .hero-cards {
+      position: relative;
+      height: 470px;
+    }
+
+    .beauty-card {
+      position: absolute;
+      width: 240px;
+      min-height: 145px;
+      padding: 24px;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid rgba(255,255,255,0.8);
+      box-shadow: 0 20px 50px rgba(80,45,60,0.08);
+      border-radius: 30px;
+      backdrop-filter: blur(10px);
+    }
+
+    .beauty-card h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .beauty-card p {
+      color: #888;
+      font-style: italic;
+      font-size: 14px;
+    }
+
+    .card-one {
+      top: 35px;
+      left: 10px;
+    }
+
+    .card-two {
+      top: 195px;
+      right: 0;
+    }
+
+    .card-three {
+      bottom: 10px;
+      left: 30px;
+    }
+
+    .pink-circle {
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: linear-gradient(135deg,#efabc3,#f9dce7);
+      right: 15px;
+      top: 100px;
+      z-index: -1;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 24px;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: auto;
+    }
+
+    .section-head {
+      margin-bottom: 50px;
+    }
+
+    .section-label {
+      color: #d9618b;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .section-head h2 {
+      font-size: clamp(34px,5vw,58px);
+      line-height: 1.05;
+      margin: 10px 0 15px;
+    }
+
+    .section-head p {
+      color: #777;
+      max-width: 600px;
+    }
+
+    /* SERVICES */
+    .services {
+      background: white;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      padding: 32px 25px;
+      border-radius: 24px;
+      background: #fff8fa;
+      border: 1px solid #f2e5ea;
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 45px rgba(70,30,45,0.08);
+    }
+
+    .service-icon {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      color: #777;
+      font-size: 14px;
+    }
+
+    /* PRICE */
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 18px;
+    }
+
+    .price-card {
+      background: white;
+      border: 1px solid #eee2e7;
+      border-radius: 22px;
+      padding: 27px;
+    }
+
+    .price-card h3 {
+      font-size: 21px;
+      margin-bottom: 20px;
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #f1ebee;
+      padding: 14px 0;
+    }
+
+    .price-row:last-child {
+      border-bottom: none;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #d9618b;
+      white-space: nowrap;
+      padding-left: 20px;
+    }
+
+    .opening {
+      margin-top: 35px;
+      padding: 30px;
+      border-radius: 25px;
+      background: #222;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .opening span {
+      color: #f5aac4;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: #fbeef3;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 18px;
+    }
+
+    .contact-card {
+      background: white;
+      border-radius: 22px;
+      padding: 30px;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #181818;
+      color: #aaa;
+      text-align: center;
+      padding: 35px 20px;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* FLOATING WHATSAPP */
+    .float-wa {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 58px;
+      height: 58px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 25px;
+      z-index: 999;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    /* MOBILE */
+    @media(max-width: 850px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-container {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-cards {
+        display: none;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .opening {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media(max-width: 520px) {
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 75px 20px;
+      }
+
+      .hero-container {
+        padding: 65px 20px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-container">
+<div class="logo">
+    <img src="logo.png" alt="Pinkc Nail Beauty Logo">
+</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#price">Price</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+
+<header class="hero">
+
+  <div class="hero-container">
+
+    <div>
+
+      <div class="small-tag">
+        NAIL · LASH · BROW · HAIR REMOVAL
+      </div>
+
+      <h1>
+        Your beauty,<br>
+        <span>your little ritual.</span>
+      </h1>
+
+      <p class="hero-text">
+        精致，不一定要复杂。Pinkc Nail Beauty 为你提供美甲、美睫、
+        纹绣与冰点除毛服务，让每一次到店都轻松、舒服、好看。
+      </p>
+
+      <div class="buttons">
+
+        <a
+        href="https://wa.me/60124446450?text=Hi%20Pinkc%20Nail%20Beauty%2C%20I%20would%20like%20to%20make%20an%20appointment."
+        class="btn btn-dark"
+        target="_blank">
+          WhatsApp 预约
+        </a>
+
+        <a href="#price" class="btn btn-light">
+          查看价目
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-cards">
+
+      <div class="pink-circle"></div>
+
+      <div class="beauty-card card-one">
+        <h3>NAIL</h3>
+        <p>Clean · Chic · Lasting</p>
+      </div>
+
+      <div class="beauty-card card-two">
+        <h3>LASH & BROW</h3>
+        <p>Soft definition</p>
+      </div>
+
+      <div class="beauty-card card-three">
+        <h3>HAIR REMOVAL</h3>
+        <p>Smooth & comfortable</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<section class="services" id="services">
+
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-label">Our Services</div>
+      <h2>Beauty services,<br>all in one place.</h2>
+      <p>
+        从指尖、睫毛到纹绣与身体护理，为你提供更完整的美丽体验。
+      </p>
+    </div>
+
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <div class="service-icon">✦</div>
+        <h3>Nail</h3>
+        <p>
+          单色、猫眼、本甲设计、延长甲与足部护理。
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">♡</div>
+        <h3>Lash</h3>
+        <p>
+          根据眼型设计自然、轻盈、精致的嫁接睫毛。
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">⌁</div>
+        <h3>Brow & Lip</h3>
+        <p>
+          粉雾眉与妈生唇，打造更自然柔和的妆感。
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">◇</div>
+        <h3>Hair Removal</h3>
+        <p>
+          冰点除毛护理，让肌肤保持更加干净顺滑。
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="price">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-label">Price Menu</div>
+
+      <h2>Simple pricing.</h2>
+
+      <p>
+        以下为原价。开业期间将推出特别优惠。
+      </p>
+
+    </div>
+
+
+    <div class="price-grid">
+
+      <div class="price-card">
+
+        <h3>Nail</h3>
+
+        <div class="price-row">
+          <span>单色美甲</span>
+          <span class="price">RM50</span>
+        </div>
+
+        <div class="price-row">
+          <span>猫眼美甲</span>
+          <span class="price">RM88</span>
+        </div>
+
+        <div class="price-row">
+          <span>本甲设计</span>
+          <span class="price">RM88 起</span>
+        </div>
+
+        <div class="price-row">
+          <span>延长甲</span>
+          <span class="price">RM138 起</span>
+        </div>
+
+      </div>
+
+
+      <div class="price-card">
+
+        <h3>Lash</h3>
+
+        <div class="price-row">
+          <span>嫁接睫毛</span>
+          <span class="price">RM100 起</span>
+        </div>
+
+      </div>
+
+
+      <div class="price-card">
+
+        <h3>PMU</h3>
+
+        <div class="price-row">
+          <span>粉雾眉</span>
+          <span class="price">RM688</span>
+        </div>
+
+        <div class="price-row">
+          <span>妈生唇</span>
+          <span class="price">RM888</span>
+        </div>
+
+      </div>
+
+
+      <div class="price-card">
+
+        <h3>Hair Removal</h3>
+
+        <div class="price-row">
+          <span>冰点除毛</span>
+          <span class="price">RM68 起</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="opening">
+
+      <div>
+        <h2>Opening Promotion <span>Coming Soon.</span></h2>
+
+        <p>
+          开业优惠即将公布，关注我们的 Instagram 获取最新消息。
+        </p>
+      </div>
+
+      <a
+      href="https://www.instagram.com/pinkc_nailbeauty/"
+      target="_blank"
+      class="btn btn-light">
+        Follow Instagram
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-label">Visit Pinkc</div>
+
+      <h2>Book your beauty time.</h2>
+
+      <p>
+        可以通过 WhatsApp、Instagram 或 Google Maps 联系我们。
+      </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+
+        <h3>WhatsApp</h3>
+
+        <p>
+          预约日期、服务项目或询问价格。
+        </p>
+
+        <a
+        class="btn btn-dark"
+        href="https://wa.me/60124446450?text=Hi%20Pinkc%20Nail%20Beauty%2C%20I%20would%20like%20to%20make%20an%20appointment."
+        target="_blank">
+          WhatsApp Us
+        </a>
+
+      </div>
+
+
+      <div class="contact-card">
+
+        <h3>Instagram</h3>
+
+        <p>
+          查看作品、最新优惠与店铺更新。
+        </p>
+
+        <a
+        class="btn btn-light"
+        href="https://www.instagram.com/pinkc_nailbeauty/"
+        target="_blank">
+          @pinkc_nailbeauty
+        </a>
+
+      </div>
+
+
+      <div class="contact-card">
+
+        <h3>Location</h3>
+
+        <p>
+          No. 42-1-1, Jalan Medan Putra 3,<br>
+          Medan Putra Business Centre,<br>
+          Bandar Sri Menjalara,<br>
+          52200 WP Kuala Lumpur.
+        </p>
+
+        <a
+        class="btn btn-light"
+        href="https://www.google.com/maps/search/?api=1&query=No.+42-1-1,+Jalan+Medan+Putra+3,+Medan+Putra+Business+Centre,+Bandar+Sri+Menjalara,+52200+Kuala+Lumpur"
+        target="_blank">
+          Open Google Maps
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <strong>PINKC NAIL BEAUTY</strong><br><br>
+
+  © 2026 Pinkc Nail Beauty · Nail · Lash · Brow · Hair Removal
+
+</footer>
+
+
+<a
+class="float-wa"
+href="https://wa.me/60124446450?text=Hi%20Pinkc%20Nail%20Beauty%2C%20I%20would%20like%20to%20make%20an%20appointment."
+target="_blank">
+  ☎
+</a>
+
+</body>
+</html>
