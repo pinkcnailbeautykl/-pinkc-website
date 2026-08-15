@@ -287,56 +287,270 @@
     }
 
     /* PRICE */
+    #price {
+      background: linear-gradient(180deg, #fffafc 0%, #fff7fa 100%);
+    }
+
     .price-grid {
       display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      align-items: start;
     }
 
     .price-card {
-      background: white;
-      border: 1px solid #eee2e7;
-      border-radius: 22px;
-      padding: 27px;
+      background: rgba(255,255,255,0.96);
+      border: 1px solid #f0e1e7;
+      border-radius: 26px;
+      padding: 30px;
+      box-shadow: 0 14px 40px rgba(93, 48, 65, 0.055);
+      overflow: hidden;
+    }
+
+    .price-card.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .price-card-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
     }
 
     .price-card h3 {
-      font-size: 21px;
-      margin-bottom: 20px;
+      font-size: 23px;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .price-card .card-kicker {
+      display: block;
+      margin-top: 5px;
+      color: #a27b89;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     .price-row {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid #f1ebee;
-      padding: 14px 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 18px;
+      border-bottom: 1px solid #f3eaee;
+      padding: 15px 0;
     }
 
     .price-row:last-child {
       border-bottom: none;
     }
 
+    .price-row > span:first-child {
+      min-width: 0;
+      color: #3a3336;
+      font-size: 15px;
+    }
+
     .price {
-      font-weight: bold;
+      font-weight: 800;
       color: #d9618b;
       white-space: nowrap;
-      padding-left: 20px;
+      text-align: right;
+      padding-left: 8px;
+    }
+
+    .price-options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 7px;
+    }
+
+    .price-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 58px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #fff0f5;
+      color: #c94e79;
+      border: 1px solid #f3cfdd;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .free-chip {
+      background: #fcebf2;
+      color: #bd426f;
+    }
+
+    .subsection-title {
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid #f0e4e9;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .subsection-title h4 {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .subsection-title span {
+      color: #a27b89;
+      font-size: 12px;
+    }
+
+    .price-note {
+      margin-top: 16px;
+      padding: 13px 15px;
+      border-radius: 14px;
+      background: #fff7fa;
+      color: #8b6f79;
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .package-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      table-layout: fixed;
+    }
+
+    .package-table th,
+    .package-table td {
+      padding: 14px 12px;
+      border-bottom: 1px solid #f2e7eb;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .package-table th {
+      color: #98717f;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: #fff8fa;
+    }
+
+    .package-table th:nth-child(2),
+    .package-table th:nth-child(3),
+    .package-table td:nth-child(2),
+    .package-table td:nth-child(3) {
+      text-align: right;
+    }
+
+    .package-table td:nth-child(2),
+    .package-table td:nth-child(3) {
+      color: #d9618b;
+      font-weight: 800;
+      white-space: nowrap;
     }
 
     .opening {
-      margin-top: 35px;
-      padding: 30px;
-      border-radius: 25px;
-      background: #222;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      gap: 25px;
-      align-items: center;
+      margin-top: 28px;
+      padding: 42px;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 92% 15%, rgba(246,185,207,0.38), transparent 24%),
+        linear-gradient(135deg, #fff4f8 0%, #fffafb 58%, #fff1f6 100%);
+      color: #333;
+      text-align: center;
+      border: 1px solid #f0d9e2;
+      box-shadow: 0 16px 42px rgba(105,55,74,0.07);
     }
 
-    .opening span {
-      color: #f5aac4;
+    .opening-badge {
+      display: inline-flex;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #222;
+      color: white;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      margin-bottom: 14px;
+    }
+
+    .opening h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .opening h3 {
+      color: #d9618b;
+      margin-bottom: 8px;
+    }
+
+    .opening-intro {
+      color: #79636b;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .promo-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 13px;
+      max-width: 820px;
+      margin: 26px auto 20px;
+    }
+
+    .promo-card {
+      background: rgba(255,255,255,0.94);
+      border: 1px solid #f0d9e2;
+      border-radius: 18px;
+      padding: 16px 18px;
+      display: grid;
+      grid-template-columns: minmax(0,1fr) auto auto;
+      align-items: center;
+      gap: 11px;
+      text-align: left;
+      box-shadow: 0 8px 24px rgba(80,40,56,0.035);
+    }
+
+    .promo-card span {
+      color: #333;
+      font-weight: 700;
+    }
+
+    .promo-card del {
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    .promo-card strong {
+      color: #d9618b;
+      font-size: 19px;
+      white-space: nowrap;
+    }
+
+    .opening-foot {
+      margin: 18px 0 20px;
+      color: #745c65;
+      font-size: 14px;
+    }
+
+    .opening .btn {
+      min-width: 230px;
+      background: #222;
+      color: #fff;
+      border-color: #222;
+    }
+
+    .opening .btn:hover {
+      background: #d9618b;
+      border-color: #d9618b;
+      color: #fff;
     }
 
     /* CONTACT */
@@ -424,6 +638,15 @@
         grid-template-columns: 1fr;
       }
 
+      .price-card.full-width {
+        grid-column: auto;
+      }
+
+      .package-table th,
+      .package-table td {
+        padding: 12px 8px;
+      }
+
       .contact-grid {
         grid-template-columns: 1fr;
       }
@@ -435,6 +658,43 @@
     }
 
     @media(max-width: 520px) {
+
+      .price-card {
+        padding: 22px 18px;
+        border-radius: 20px;
+      }
+
+      .price-row {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 10px;
+      }
+
+      .price-row > span:first-child {
+        font-size: 14px;
+      }
+
+      .price-options {
+        gap: 5px;
+      }
+
+      .price-chip {
+        min-width: 0;
+        padding: 5px 8px;
+        font-size: 12px;
+      }
+
+      .promo-list {
+        grid-template-columns: 1fr;
+      }
+
+      .promo-card {
+        grid-template-columns: minmax(0,1fr) auto auto;
+        padding: 14px;
+      }
+
+      .opening {
+        padding: 30px 18px;
+      }
 
       .service-grid {
         grid-template-columns: 1fr;
@@ -587,115 +847,184 @@
 
 
 <section id="price">
-
   <div class="container">
 
     <div class="section-head">
-
       <div class="section-label">Price Menu</div>
-
       <h2>Simple pricing.</h2>
-
-      <p>
-        以下为原价。开业期间将推出特别优惠。
-      </p>
-
+      <p>以下为原价。开业期间将推出特别优惠。</p>
     </div>
-
 
     <div class="price-grid">
 
       <div class="price-card">
-
-        <h3>Nail</h3>
-
-        <div class="price-row">
-          <span>单色美甲</span>
-          <span class="price">RM50</span>
+        <div class="price-card-head">
+          <div>
+            <h3>Nail · 美甲</h3>
+            <span class="card-kicker">Nail Services</span>
+          </div>
         </div>
 
-        <div class="price-row">
-          <span>猫眼美甲</span>
-          <span class="price">RM88</span>
-        </div>
+        <div class="price-row"><span>单色美甲</span><span class="price">RM50</span></div>
+        <div class="price-row"><span>猫眼美甲</span><span class="price">RM88</span></div>
+        <div class="price-row"><span>法式美甲</span><span class="price">RM100</span></div>
 
         <div class="price-row">
           <span>本甲设计</span>
-          <span class="price">RM88 起</span>
+          <span class="price-options">
+            <span class="price-chip">RM88</span><span class="price-chip">RM108</span><span class="price-chip">RM128</span>
+          </span>
         </div>
 
         <div class="price-row">
-          <span>延长甲</span>
-          <span class="price">RM138 起</span>
+          <span>延长款式</span>
+          <span class="price-options">
+            <span class="price-chip">RM138</span><span class="price-chip">RM168</span><span class="price-chip">RM198</span>
+          </span>
         </div>
 
-      </div>
+        <div class="price-row">
+          <span>延长甲续做</span>
+          <span class="price-options">
+            <span class="price-chip">RM80</span><span class="price-chip">RM100</span><span class="price-chip">RM120</span>
+          </span>
+        </div>
 
+        <div class="subsection-title"><h4>Care & Removal</h4><span>护理 · 卸甲</span></div>
+        <div class="price-row"><span>加固</span><span class="price-chip free-chip">FREE</span></div>
+        <div class="price-row"><span>建构</span><span class="price">RM30</span></div>
+        <div class="price-row"><span>本店卸甲</span><span class="price">RM10</span></div>
+        <div class="price-row"><span>外店卸甲</span><span class="price">RM20</span></div>
+        <div class="price-row"><span>延长甲卸甲</span><span class="price">RM40</span></div>
+      </div>
 
       <div class="price-card">
-
-        <h3>Lash</h3>
-
-        <div class="price-row">
-          <span>嫁接睫毛</span>
-          <span class="price">RM100 起</span>
+        <div class="price-card-head">
+          <div>
+            <h3>Foot Care · 足部护理</h3>
+            <span class="card-kicker">Pedicure & Spa</span>
+          </div>
         </div>
-
+        <div class="price-row"><span>脚部快速上色</span><span class="price">RM58</span></div>
+        <div class="price-row"><span>脚部单色</span><span class="price">RM88</span></div>
+        <div class="price-row"><span>脚部护理</span><span class="price">RM58</span></div>
+        <div class="price-row"><span>脚部 SPA</span><span class="price">RM158</span></div>
+        <div class="price-note">SPA includes foot soak, exfoliation, dead skin care, foot mask & foot massage.<br>包含泡脚、去角质、去死皮护理、足膜及足部按摩。</div>
       </div>
-
 
       <div class="price-card">
-
-        <h3>PMU</h3>
-
-        <div class="price-row">
-          <span>粉雾眉</span>
-          <span class="price">RM688</span>
+        <div class="price-card-head">
+          <div>
+            <h3>Lash · 嫁接睫毛</h3>
+            <span class="card-kicker">Eyelash Extensions</span>
+          </div>
         </div>
+        <div class="price-row"><span>Natural 自然款</span><span class="price">RM100</span></div>
+        <div class="price-row"><span>Fairy 仙子款</span><span class="price">RM128</span></div>
+        <div class="price-row"><span>Manga 漫画款</span><span class="price">RM138</span></div>
+        <div class="price-row"><span>Volume 浓密款</span><span class="price">RM158</span></div>
+        <div class="price-row"><span>Thai Style 泰式款</span><span class="price">RM168</span></div>
+        <div class="price-row"><span>Wet Look</span><span class="price">RM168</span></div>
+        <div class="price-row"><span>Lower Lash 下睫毛</span><span class="price">RM30</span></div>
+        <div class="price-row"><span>Removal 卸睫毛</span><span class="price">RM30</span></div>
 
-        <div class="price-row">
-          <span>妈生唇</span>
-          <span class="price">RM888</span>
-        </div>
-
+        <div class="subsection-title"><h4>Refill · 补睫毛</h4><span>Refill Policy</span></div>
+        <div class="price-row"><span>7天内</span><span class="price-chip free-chip">FREE</span></div>
+        <div class="price-row"><span>8–14天内</span><span class="price">原价50%</span></div>
+        <div class="price-row"><span>超过14天</span><span class="price">Full Price</span></div>
+        <div class="price-note">* 7天内免费补睫毛仅限正常脱落，每次嫁接限免费补一次。<br>
+    * Free refill within 7 days applies to natural lash shedding only. Limited to one complimentary refill per full set.</div>
       </div>
-
 
       <div class="price-card">
+        <div class="price-card-head">
+          <div>
+            <h3>PMU · 纹绣</h3>
+            <span class="card-kicker">Brow & Lip</span>
+          </div>
+        </div>
+        <div class="price-row"><span>粉雾眉</span><span class="price">RM688</span></div>
+        <div class="price-row"><span>妈生唇</span><span class="price">RM888</span></div>
 
-        <h3>Hair Removal</h3>
+        <div class="subsection-title" style="margin-top:22px;">补色 · TOUCH-UP</div>
 
         <div class="price-row">
-          <span>冰点除毛</span>
-          <span class="price">RM68 起</span>
+          <span>3个月内 · Within 3 Months</span>
+          <span class="price">FREE × 1</span>
         </div>
 
-      </div>
+        <div class="price-row">
+          <span>超过3个月 · After 3 Months</span>
+          <span class="price">50% of Original Price</span>
+        </div>
 
-    </div>
-
-
-    <div class="opening">
-
-      <div>
-        <h2>Opening Promotion <span>Coming Soon.</span></h2>
-
-        <p>
-          开业优惠即将公布，关注我们的 Instagram 获取最新消息。
+        <p class="price-note" style="margin-top:15px;">
+          * 3个月内免费补色一次；超过3个月补色按原价50%收费。每个 PMU 项目限免费补色一次。<br>
+          * One complimentary touch-up is included within 3 months. Touch-ups after 3 months are charged at 50% of the original price. Limited to one complimentary touch-up per PMU service.
         </p>
       </div>
 
-      <a
-      href="https://www.instagram.com/pinkc_nailbeauty/"
-      target="_blank"
-      class="btn btn-light">
-        Follow Instagram
-      </a>
+      <div class="price-card">
+        <div class="price-card-head">
+          <div>
+            <h3>Hair Removal · 冰点除毛</h3>
+            <span class="card-kicker">Single Session</span>
+          </div>
+        </div>
+        <div class="price-row"><span>唇毛</span><span class="price">RM58</span></div>
+        <div class="price-row"><span>腋下</span><span class="price">RM68</span></div>
+        <div class="price-row"><span>手臂</span><span class="price">RM128</span></div>
+        <div class="price-row"><span>小腿</span><span class="price">RM138</span></div>
+        <div class="price-row"><span>全腿</span><span class="price">RM198</span></div>
+        <div class="price-row"><span>比基尼线</span><span class="price">RM98</span></div>
+        <div class="price-row"><span>Brazilian</span><span class="price">RM168</span></div>
+      </div>
+
+      <div class="price-card full-width">
+        <div class="price-card-head">
+          <div>
+            <h3>Hair Removal Packages</h3>
+            <span class="card-kicker">6 Sessions / 10 Sessions</span>
+          </div>
+        </div>
+
+        <table class="package-table">
+          <thead><tr><th>部位</th><th>6次</th><th>10次</th></tr></thead>
+          <tbody>
+            <tr><td>唇毛</td><td>RM298</td><td>RM438</td></tr>
+            <tr><td>腋下</td><td>RM338</td><td>RM498</td></tr>
+            <tr><td>手臂</td><td>RM638</td><td>RM938</td></tr>
+            <tr><td>小腿</td><td>RM688</td><td>RM988</td></tr>
+            <tr><td>全腿</td><td>RM988</td><td>RM1488</td></tr>
+            <tr><td>比基尼线</td><td>RM488</td><td>RM688</td></tr>
+            <tr><td>Brazilian</td><td>RM838</td><td>RM1188</td></tr>
+          </tbody>
+        </table>
+      </div>
 
     </div>
 
-  </div>
+    <div class="opening">
+      <div class="opening-badge">LIMITED OPENING OFFER</div>
+      <h2>🎉 GRAND OPENING SPECIAL</h2>
+      <h3>开业限定优惠</h3>
+      <p class="opening-intro">庆祝 PINKC NAIL BEAUTY 全新开业，限时享有特别优惠价 ✨</p>
 
+      <div class="promo-list">
+        <div class="promo-card"><span>粉雾眉</span><del>RM688</del><strong>RM398</strong></div>
+        <div class="promo-card"><span>妈生唇</span><del>RM888</del><strong>RM500</strong></div>
+        <div class="promo-card"><span>嫁接睫毛</span><del>RM100起</del><strong>RM78起</strong></div>
+        <div class="promo-card"><span>冰点除毛</span><del>RM68起</del><strong>RM38起</strong></div>
+        <div class="promo-card"><span>美甲单色</span><del>RM50</del><strong>RM38</strong></div>
+        <div class="promo-card"><span>猫眼美甲</span><del>RM88</del><strong>RM58</strong></div>
+      </div>
+
+      <p class="opening-foot">✨ Opening Special<br>优惠仅限开业期间，名额有限。<br>提前预约，锁定你的开业优惠价。</p>
+
+      <a href="https://wa.me/60124446450?text=Hi%20Pinkc%20Nail%20Beauty%2C%20I%20would%20like%20to%20book%20the%20Grand%20Opening%20promotion." target="_blank" class="btn btn-light">BOOK YOUR APPOINTMENT</a>
+    </div>
+
+  </div>
 </section>
 
 
