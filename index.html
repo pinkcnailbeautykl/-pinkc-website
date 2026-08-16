@@ -709,6 +709,67 @@
       }
     }
 
+    /* ===== MOBILE FRIENDLY ===== */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  nav {
+    padding: 10px 15px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  .logo img {
+    max-width: 150px;
+    height: auto;
+  }
+
+  .hero-container {
+    padding: 40px 18px;
+  }
+
+  section {
+    padding: 45px 18px;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .services-grid,
+  .pricing-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
   </style>
 </head>
 
