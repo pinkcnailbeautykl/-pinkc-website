@@ -1,25 +1,21 @@
-PINKC NAIL BEAUTY — 5-PAGE WEBSITE
+PINKC NAIL BEAUTY — EN / 中文 5-PAGE WEBSITE
 
-Files in this package:
-- index.html      Home
-- services.html   Services
-- price.html      Price Menu (category tabs)
-- works.html      Our Work
-- contact.html    Contact / Booking
-- style.css       Shared design + mobile responsive styles
-- script.js       Mobile menu, price tabs, gallery filters/lightbox
-- logo.png
-- CNAME
-- 9 work images
+This package is ready to upload to GitHub.
+It includes:
+- EN / 中文 switch on every page
+- Language choice remembered when moving between pages
+- Mobile-friendly menu
+- Updated Hair Removal prices
+- Homepage Hair Removal: From RM68
+- First Trial RM48 for selected small areas only
 
-IMPORTANT WHEN UPLOADING TO GITHUB:
-1. Keep ALL these files in the repository ROOT (same level).
-2. Upload/replace the current index.html.
-3. Upload the 4 new pages: services.html, price.html, works.html, contact.html.
-4. Upload style.css and script.js.
-5. Upload the work images and logo.png.
-6. Keep CNAME = pinkcnailbeauty.com.
-7. Commit directly to main.
-8. Wait 1–3 minutes and refresh pinkcnailbeauty.com.
+UPLOAD:
+1. GitHub → -pinkc-website
+2. Add file → Upload files
+3. In this folder press Command + A
+4. Upload ALL files inside the folder
+5. Commit directly to main
+6. Wait 1–3 minutes
+7. Open pinkcnailbeauty.com and press Command + Shift + R
 
-This version is mobile-friendly and splits the long one-page site into 5 pages.
+Do not manually edit the old broken index.html. Upload this complete package instead.

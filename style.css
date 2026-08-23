@@ -228,3 +228,19 @@ footer strong{color:white}
   .work-caption{padding:9px 10px}
   .work-caption strong{font-size:11px}.work-caption span{font-size:8px}
 }
+
+/* EN / 中文 language switch */
+.lang-btn{
+  border:1px solid var(--line);background:#fff;color:var(--ink);
+  border-radius:999px;padding:9px 13px;font-size:12px;font-weight:850;
+  cursor:pointer;white-space:nowrap;
+}
+.lang-btn:hover{border-color:var(--pink);color:var(--pink)}
+.i18n.zh{display:none}
+body[data-lang="zh"] .i18n.en{display:none!important}
+body[data-lang="zh"] .i18n.zh{display:revert!important}
+body[data-lang="en"] .i18n.en{display:revert!important}
+body[data-lang="en"] .i18n.zh{display:none!important}
+@media(max-width:760px){
+  .lang-btn{width:100%;margin-top:5px;padding:11px 12px;text-align:center}
+}

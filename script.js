@@ -39,3 +39,19 @@ if(lightbox){
   lightbox.addEventListener('click',e=>{if(e.target===lightbox || e.target.tagName==='BUTTON') close();});
   document.addEventListener('keydown',e=>{if(e.key==='Escape') close();});
 }
+
+// EN / 中文 language switch — remembers the visitor's choice across all pages
+const langToggle = document.getElementById('langToggle');
+function applyLanguage(lang){
+  document.body.dataset.lang = lang;
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  localStorage.setItem('pinkcLanguage', lang);
+  if(langToggle) langToggle.textContent = lang === 'zh' ? 'EN' : '中文';
+}
+applyLanguage(localStorage.getItem('pinkcLanguage') || 'en');
+if(langToggle){
+  langToggle.addEventListener('click',()=>{
+    applyLanguage(document.body.dataset.lang === 'zh' ? 'en' : 'zh');
+    if(typeof navLinks !== 'undefined' && navLinks) navLinks.classList.remove('open');
+  });
+}

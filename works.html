@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -7,13 +7,13 @@
 <title>Our Work | Pinkc Nail Beauty</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-lang="en">
 
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html"><img src="logo.png" alt="Pinkc Nail Beauty"></a>
     <button class="menu-btn" aria-label="Open menu">☰</button>
-    <nav class="nav-links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="price.html">Price</a><a href="works.html" class="active">Our Work</a><a href="contact.html" class="nav-cta">Book Now</a></nav>
+    <nav class="nav-links"><a href="index.html"><span class="i18n en">Home</span><span class="i18n zh">首页</span></a><a href="services.html"><span class="i18n en">Services</span><span class="i18n zh">服务</span></a><a href="price.html"><span class="i18n en">Price</span><span class="i18n zh">价目表</span></a><a href="works.html" class="active"><span class="i18n en">Our Work</span><span class="i18n zh">作品</span></a><a href="contact.html" class="nav-cta"><span class="i18n en">Book Now</span><span class="i18n zh">预约</span></a><button id="langToggle" class="lang-btn" type="button">中文</button></nav>
   </div>
 </header>
 
@@ -22,8 +22,8 @@
   <div class="container">
     <div class="breadcrumb">HOME / OUR WORK</div>
     <div class="eyebrow">Our Work · 作品展示</div>
-    <h1 class="page-title">Little details,<br>beautiful results.</h1>
-    <p class="page-intro">精选 Nail、Lash、Brow 与 Lip 作品。点击照片可以放大查看。</p>
+    <h1 class="page-title i18n en">Little details,<br>beautiful results.</h1><h1 class="page-title i18n zh">细节用心，<br>效果更美。</h1>
+    <p class="page-intro i18n en">Selected Nail, Lash, Brow and Lip works. Tap any photo to enlarge it.</p><p class="page-intro i18n zh">精选 Nail、Lash、Brow 与 Lip 作品。点击照片可以放大查看。</p>
   </div>
 </section>
 <section style="padding-top:45px">
@@ -35,7 +35,7 @@
       <button class="filter-btn" data-filter="brow">Brow · 眉</button>
       <button class="filter-btn" data-filter="lip">Lip · 唇</button>
     </div>
-    <div class="gallery"><figure class="work-card" data-category="nail"><img src="nail-01.jpg" alt="Crystal Floral Nails" loading="lazy"><figcaption class="work-caption"><strong>Crystal Floral Nails</strong><span>Nail</span></figcaption></figure><figure class="work-card" data-category="nail"><img src="nail-02.jpg" alt="Pearl & Crystal Nails" loading="lazy"><figcaption class="work-caption"><strong>Pearl & Crystal Nails</strong><span>Nail</span></figcaption></figure><figure class="work-card" data-category="lash"><img src="lash-01.jpg" alt="Soft Lash Design" loading="lazy"><figcaption class="work-caption"><strong>Soft Lash Design</strong><span>Lash</span></figcaption></figure><figure class="work-card ba" data-category="brow"><img src="brow-01.jpg" alt="Powder Brow · Before & After" loading="lazy"><figcaption class="work-caption"><strong>Powder Brow · Before & After</strong><span>Brow</span></figcaption></figure><figure class="work-card ba" data-category="brow"><img src="brow-02.jpg?v=2" alt="Men’s Powder Brow · Before & After" loading="lazy"><figcaption class="work-caption"><strong>Men’s Powder Brow · Before & After</strong><span>Brow</span></figcaption></figure><figure class="work-card" data-category="brow"><img src="brow-03.jpg" alt="Soft Powder Brow" loading="lazy"><figcaption class="work-caption"><strong>Soft Powder Brow</strong><span>Brow</span></figcaption></figure><figure class="work-card ba" data-category="lip"><img src="lip-01.jpg" alt="Natural Lip Blush · Before & After" loading="lazy"><figcaption class="work-caption"><strong>Natural Lip Blush · Before & After</strong><span>Lip</span></figcaption></figure><figure class="work-card ba" data-category="lip"><img src="lip-02.jpg" alt="Fresh Pink Lip · Before & After" loading="lazy"><figcaption class="work-caption"><strong>Fresh Pink Lip · Before & After</strong><span>Lip</span></figcaption></figure><figure class="work-card ba" data-category="lip"><img src="lip-03.jpg" alt="Natural Tone Lip Blush" loading="lazy"><figcaption class="work-caption"><strong>Natural Tone Lip Blush</strong><span>Lip</span></figcaption></figure></div>
+    <div class="gallery"><figure class="work-card" data-category="nail"><img src="nail-01.jpg" alt="Crystal Floral Nails" loading="lazy"><figcaption class="work-caption"><strong><span class="i18n en">Crystal Floral Nails</span><span class="i18n zh">水晶花美甲</span></strong><span>Nail</span></figcaption></figure><figure class="work-card" data-category="nail"><img src="nail-02.jpg" alt="Pearl & Crystal Nails" loading="lazy"><figcaption class="work-caption"><strong><span class="i18n en">Pearl & Crystal Nails</span><span class="i18n zh">珍珠水晶美甲</span></strong><span>Nail</span></figcaption></figure><figure class="work-card" data-category="lash"><img src="lash-01.jpg" alt="Soft Lash Design" loading="lazy"><figcaption class="work-caption"><strong><span class="i18n en">Soft Lash Design</span><span class="i18n zh">自然柔和美睫</span></strong><span>Lash</span></figcaption></figure><figure class="work-card ba" data-category="brow"><img src="brow-01.jpg" alt="Powder Brow · Before & After" loading="lazy"><figcaption class="work-caption"><strong><span class="i18n en">Powder Brow · Before & After</span><span class="i18n zh">粉雾眉 · 前后对比</span></strong><span>Brow</span></figcaption></figure><figure class="work-card ba" data-category="brow"><img src="brow-02.jpg?v=2" alt="Men’s Powder Brow · Before & After" loading="lazy"><figcaption class="work-caption"><strong><span class="i18n en">Men’s Powder Brow · Before & After</span><span class="i18n zh">男士粉雾眉 · 前后对比</span></strong><span>Brow</span></figcaption></figure><figure class="work-card" data-category="brow"><img src="brow-03.jpg" alt="Soft Powder Brow" loading="lazy"><figcaption class="work-caption"><strong><span class="i18n en">Soft Powder Brow</span><span class="i18n zh">自然粉雾眉</span></strong><span>Brow</span></figcaption></figure><figure class="work-card ba" data-category="lip"><img src="lip-01.jpg" alt="Natural Lip Blush · Before & After" loading="lazy"><figcaption class="work-caption"><strong><span class="i18n en">Natural Lip Blush · Before & After</span><span class="i18n zh">自然妈生唇 · 前后对比</span></strong><span>Lip</span></figcaption></figure><figure class="work-card ba" data-category="lip"><img src="lip-02.jpg" alt="Fresh Pink Lip · Before & After" loading="lazy"><figcaption class="work-caption"><strong><span class="i18n en">Fresh Pink Lip · Before & After</span><span class="i18n zh">粉嫩妈生唇 · 前后对比</span></strong><span>Lip</span></figcaption></figure><figure class="work-card ba" data-category="lip"><img src="lip-03.jpg" alt="Natural Tone Lip Blush" loading="lazy"><figcaption class="work-caption"><strong><span class="i18n en">Natural Tone Lip Blush</span><span class="i18n zh">自然色妈生唇</span></strong><span>Lip</span></figcaption></figure></div>
   </div>
 </section>
 <div class="lightbox" aria-hidden="true"><button aria-label="Close">×</button><img src="" alt="Expanded work"></div>
@@ -45,7 +45,7 @@
 <footer>
   <div class="container">
     <strong>PINKC NAIL BEAUTY</strong><br><br>
-    © 2026 Pinkc Nail Beauty · Nail · Lash · Brow · Hair Removal
+    <span class="i18n en">© 2026 Pinkc Nail Beauty · Nail · Lash · Brow · Hair Removal</span><span class="i18n zh">© 2026 Pinkc Nail Beauty · 美甲 · 美睫 · 纹绣 · 冰点除毛</span>
   </div>
 </footer>
 <a class="float-wa" href="https://wa.me/60124446450?text=Hi%20Pinkc%20Nail%20Beauty%2C%20I%20would%20like%20to%20make%20an%20appointment." target="_blank" aria-label="WhatsApp">☎</a>
