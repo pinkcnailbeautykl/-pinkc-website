@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Pinkc Nail Beauty price menu in Kepong for nail, lash, powder brow 粉雾眉, eyebrow embroidery 纹眉纹绣, brow correction 改眉, natural lip blush 妈生唇 and foot care.">
+<meta name="description" content="Pinkc Nail Beauty price menu in Kepong for nail, lash, powder brow 粉雾眉, eyebrow embroidery 纹眉纹绣, brow correction 改眉, natural lip blush 妈生唇, foot care and member credit packages.">
 <title>Price Menu | Pinkc Nail Beauty Kepong · 粉雾眉 · 妈生唇 · 改眉</title>
 <link rel="canonical" href="https://pinkcnailbeauty.com/price.html">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
@@ -27,6 +27,172 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BeautySalon","@id":"https://pinkcnailbeauty.com/#business","name":"Pinkc Nail Beauty","url":"https://pinkcnailbeauty.com/","logo":"https://pinkcnailbeauty.com/logo.png","image":"https://pinkcnailbeauty.com/og-image.jpg","telephone":"+60124446450","priceRange":"RM","address":{"@type":"PostalAddress","streetAddress":"No. 42-1-1, Jalan Medan Putra 3, Medan Putra Business Centre","addressLocality":"Bandar Sri Menjalara","postalCode":"52200","addressRegion":"Kuala Lumpur","addressCountry":"MY"},"areaServed":["Bandar Sri Menjalara","Kepong","Kuala Lumpur"],"sameAs":["https://www.instagram.com/pinkc_nailbeauty/"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Beauty Services","itemListElement":[{"@type":"OfferCatalog","name":"Nail Services"},{"@type":"OfferCatalog","name":"Eyelash Extensions"},{"@type":"OfferCatalog","name":"Powder Brow PMU"},{"@type":"OfferCatalog","name":"Lip Blush PMU"},{"@type":"OfferCatalog","name":"Foot Care & Pedicure"}]}}</script>
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* Membership */
+.membership-section{
+  margin-top:36px;
+  padding:34px;
+  border-radius:28px;
+  background:linear-gradient(135deg,#fff8fb 0%,#fff 55%,#fff4f8 100%);
+  border:1px solid #f3dfe7;
+  box-shadow:0 18px 50px rgba(123,72,91,.08);
+}
+.membership-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:20px;
+  margin-bottom:24px;
+}
+.membership-head h2{margin:5px 0 6px;font-size:32px;line-height:1.1}
+.membership-head p{margin:0;color:var(--muted);max-width:660px}
+.member-badge{
+  display:inline-flex;
+  align-items:center;
+  border:1px solid #efcddd;
+  background:#fff;
+  color:#c85f86;
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.04em;
+  white-space:nowrap;
+}
+.member-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+}
+.member-card{
+  position:relative;
+  background:#fff;
+  border:1px solid #f0e0e7;
+  border-radius:22px;
+  padding:24px;
+  overflow:hidden;
+}
+.member-card.featured{
+  border-color:#e7b8ca;
+  box-shadow:0 12px 35px rgba(204,91,133,.12);
+}
+.member-card .plan{
+  color:#a36f82;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.member-card .amount{
+  font-size:34px;
+  font-weight:900;
+  margin:6px 0 2px;
+  color:#252025;
+}
+.member-card .credit{
+  font-weight:850;
+  color:#c4587e;
+  margin-bottom:16px;
+}
+.member-card ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.member-card li{
+  padding:8px 0;
+  border-bottom:1px solid #f5edf0;
+  font-size:14px;
+  line-height:1.45;
+}
+.member-card li:last-child{border-bottom:0}
+.member-card .popular{
+  position:absolute;
+  top:14px;
+  right:14px;
+  background:#fce7ef;
+  color:#bc4f78;
+  border-radius:999px;
+  padding:6px 9px;
+  font-size:10px;
+  font-weight:900;
+}
+.member-cta{
+  margin-top:22px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.member-terms{
+  margin-top:24px;
+  padding:20px;
+  border-radius:18px;
+  background:#fff;
+  border:1px solid #f1e4e9;
+}
+.member-terms h3{margin:0 0 10px;font-size:18px}
+.member-terms ul{margin:0;padding-left:20px;color:var(--muted);font-size:13px;line-height:1.7}
+.member-price-box{
+  margin-top:24px;
+}
+.member-price-box details{
+  background:#fff;
+  border:1px solid #f0e0e7;
+  border-radius:18px;
+  overflow:hidden;
+}
+.member-price-box summary{
+  cursor:pointer;
+  padding:18px 20px;
+  font-weight:900;
+  color:#342d31;
+  list-style:none;
+}
+.member-price-box summary::-webkit-details-marker{display:none}
+.member-price-box summary::after{
+  content:"+";
+  float:right;
+  color:#c4587e;
+  font-size:20px;
+}
+.member-price-box details[open] summary::after{content:"–"}
+.member-price-inner{
+  padding:0 20px 20px;
+}
+.member-price-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px 24px;
+}
+.member-price-row{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  padding:9px 0;
+  border-bottom:1px solid #f4ecef;
+  font-size:14px;
+}
+.member-price-row strong{color:#c4587e;white-space:nowrap}
+.member-cat{
+  grid-column:1/-1;
+  margin-top:8px;
+  padding-top:6px;
+  font-weight:900;
+  color:#5a4d53;
+}
+@media(max-width:850px){
+  .member-grid{grid-template-columns:1fr}
+  .membership-head{display:block}
+  .member-badge{margin-top:12px}
+}
+@media(max-width:600px){
+  .membership-section{padding:22px 16px;border-radius:22px}
+  .membership-head h2{font-size:27px}
+  .member-price-grid{grid-template-columns:1fr}
+}
+</style>
+
 </head>
 <body data-lang="en">
 
@@ -117,6 +283,114 @@
         <div class="note">3个月内免费补色一次；超过3个月补色按原价50%收费。每个 PMU 项目限免费补色一次。<br>One complimentary touch-up is included within 3 months. Touch-ups after 3 months are charged at 50% of the original price.</div>
       </div></div>
     </div>
+
+    <section class="membership-section" aria-labelledby="membership-title">
+      <div class="membership-head">
+        <div>
+          <div class="eyebrow">PINKC MEMBERSHIP · 会员</div>
+          <h2 id="membership-title"><span class="i18n en">More value with every visit.</span><span class="i18n zh">每一次到店，都更值得。</span></h2>
+          <p class="i18n en">Top up credit, enjoy member-exclusive prices and selected complimentary SPA care.</p>
+          <p class="i18n zh">充值 Credit，享会员专属价，并获得指定免费 SPA 护理福利。</p>
+        </div>
+        <div class="member-badge">MEMBER PRICE · 23% OFF</div>
+      </div>
+
+      <div class="member-grid">
+        <article class="member-card">
+          <div class="plan">RM500 MEMBER</div>
+          <div class="amount">RM500</div>
+          <div class="credit">Total Credit · RM500</div>
+          <ul>
+            <li>✓ Member Price · 会员专属价</li>
+            <li>🎁 FREE Hand <strong>OR</strong> Foot SPA Care ×1</li>
+            <li>↗ Credit can be shared with friends · Credit 可与朋友共享</li>
+          </ul>
+        </article>
+
+        <article class="member-card featured">
+          <div class="popular">POPULAR</div>
+          <div class="plan">RM1,000 MEMBER</div>
+          <div class="amount">RM1,000</div>
+          <div class="credit">Total Credit · <strong>RM1,100</strong></div>
+          <ul>
+            <li>✓ Member Price · 会员专属价</li>
+            <li>🎁 FREE Credit · <strong>RM100</strong></li>
+            <li>🎁 FREE Hand &amp; Foot SPA Care ×1</li>
+            <li>↗ Credit can be shared with friends · Credit 可与朋友共享</li>
+          </ul>
+        </article>
+
+        <article class="member-card">
+          <div class="plan">RM1,500 MEMBER</div>
+          <div class="amount">RM1,500</div>
+          <div class="credit">Total Credit · <strong>RM1,720</strong></div>
+          <ul>
+            <li>✓ Member Price · 会员专属价</li>
+            <li>🎁 FREE Credit · <strong>RM220</strong></li>
+            <li>🎁 FREE Hand &amp; Foot SPA Care ×2</li>
+            <li>↗ Credit can be shared with friends · Credit 可与朋友共享</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="member-price-box">
+        <details>
+          <summary>View Member Price · 查看会员价</summary>
+          <div class="member-price-inner">
+            <div class="member-price-grid">
+              <div class="member-cat">Nail · 美甲</div>
+              <div class="member-price-row"><span>Solid Colour · 单色</span><strong>RM50</strong></div>
+              <div class="member-price-row"><span>Cat Eye · 猫眼</span><strong>RM88</strong></div>
+              <div class="member-price-row"><span>French · 法式</span><strong>RM100</strong></div>
+              <div class="member-price-row"><span>Natural Nail Design · 本甲设计</span><strong>RM88 / 108 / 128</strong></div>
+              <div class="member-price-row"><span>Nail Extensions · 延长款式</span><strong>RM138 / 168 / 198</strong></div>
+              <div class="member-price-row"><span>Extension Refill · 延长甲续做</span><strong>RM80 / 100 / 120</strong></div>
+              <div class="member-price-row"><span>Strengthening · 加固</span><strong>FREE</strong></div>
+              <div class="member-price-row"><span>Structure · 建构</span><strong>RM30</strong></div>
+              <div class="member-price-row"><span>In-House Removal · 本店卸甲</span><strong>RM10</strong></div>
+              <div class="member-price-row"><span>External Removal · 外店卸甲</span><strong>RM20</strong></div>
+              <div class="member-price-row"><span>Extension Removal · 延长甲卸甲</span><strong>RM40</strong></div>
+
+              <div class="member-cat">Foot Care · 足部</div>
+              <div class="member-price-row"><span>Quick Colour · 快速上色</span><strong>RM58</strong></div>
+              <div class="member-price-row"><span>Solid Colour · 单色</span><strong>RM88</strong></div>
+              <div class="member-price-row"><span>Foot Care · 足部护理</span><strong>RM58</strong></div>
+              <div class="member-price-row"><span>Foot SPA</span><strong>RM158</strong></div>
+
+              <div class="member-cat">Lash · 美睫</div>
+              <div class="member-price-row"><span>Natural · 自然款</span><strong>RM100</strong></div>
+              <div class="member-price-row"><span>Fairy · 仙子款</span><strong>RM128</strong></div>
+              <div class="member-price-row"><span>Manga · 漫画款</span><strong>RM138</strong></div>
+              <div class="member-price-row"><span>Volume · 浓密款</span><strong>RM158</strong></div>
+              <div class="member-price-row"><span>Thai Style · 泰式款</span><strong>RM168</strong></div>
+              <div class="member-price-row"><span>Wet Look</span><strong>RM168</strong></div>
+              <div class="member-price-row"><span>Lower Lash · 下睫毛</span><strong>RM30</strong></div>
+              <div class="member-price-row"><span>Removal · 卸睫毛</span><strong>RM30</strong></div>
+
+              <div class="member-cat">PMU · 纹绣</div>
+              <div class="member-price-row"><span>Powder Brow · 粉雾眉</span><strong>RM688</strong></div>
+              <div class="member-price-row"><span>Lip Blush · 妈生唇</span><strong>RM888</strong></div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="member-terms">
+        <h3><span class="i18n en">Membership Terms</span><span class="i18n zh">会员条款</span></h3>
+        <ul>
+          <li>Credits may be shared with friends · Credit 可与朋友共享使用。</li>
+          <li>Credits may be used for all services at Pinkc Nail Beauty · Credit 可用于店内所有项目。</li>
+          <li>Membership credits are subject to a validity period stated at purchase · Credit 设有有效期限，以购买时注明期限为准。</li>
+          <li>Member Price / Credits cannot be combined with other promotions · 会员价 / Credit 不可与其他 Promotion 同时使用。</li>
+          <li>Credits are non-refundable and cannot be exchanged for cash, except if Pinkc Nail Beauty permanently ceases operations · Credit 不可兑换现金或退款，除非 Pinkc Nail Beauty 永久结束营业。</li>
+        </ul>
+      </div>
+
+      <div class="member-cta">
+        <a class="btn btn-dark" href="https://wa.me/60124446450?text=Hi%20Pinkc%20Nail%20Beauty%2C%20I%20would%20like%20to%20join%20the%20membership." target="_blank"><span class="i18n en">Join Membership</span><span class="i18n zh">加入会员</span></a>
+      </div>
+    </section>
+
 <div style="margin-top:32px" class="promo-panel">
       <div class="promo-top">
         <div><div class="promo-badge">GRAND OPENING</div><h2 class="i18n en">Opening Special</h2><h2 class="i18n zh">开业限定优惠</h2><p class="i18n en" style="color:var(--muted);margin-top:7px">Available for a limited time. Limited slots.</p><p class="i18n zh" style="color:var(--muted);margin-top:7px">优惠仅限开业期间，名额有限。</p></div>
